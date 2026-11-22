@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:80"
+  phases:
+    - duration: 30
+      arrivalRate: 5
+      rampTo: 50
+      name: "Calentamiento (ramp up)"
+    - duration: 60
+      arrivalRate: 50
+      name: "Carga sostenida"
+scenarios:
+  - flow:
+      - get:
+          url: "/"
